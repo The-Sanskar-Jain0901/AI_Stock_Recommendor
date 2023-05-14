@@ -7,5 +7,4 @@ scikit_learn==1.2.2
 streamlit==1.22.0
 ta==0.10.2
 tensorflow==2.12.0
-tensorflow_intel==2.12.0
 yfinance==0.2.18

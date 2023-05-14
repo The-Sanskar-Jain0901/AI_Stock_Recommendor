@@ -10,7 +10,9 @@ def data():
         end_date = datetime.datetime.now()
         stock = yf.download( tickerSymbol+ '.NS', start=start_date,
                                         end=end_date, interval='1d')
-        df['close']=stock['Close'][len(stock)-1]
+        close=stock['Close'][len(stock)-1]
+        df.loc[str(tickerSymbol) == df.index,
+                            'close'] = close
     df.to_excel('AICP_LT.xlsx')
         
- 
+data()
